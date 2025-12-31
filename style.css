@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: #e5e7eb;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #020617;
+    padding-top: 40px;
+}
+
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.side-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background: #111827;
+    border-radius: 6px;
+    text-align: right;
+}
+
+.side-btn:hover {
+    background: #1e293b;
+}
+
+/* Layout */
+.content {
+    margin-right: 220px;
+    padding: 40px;
+}
+
+/* Contact */
+.contact-info {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-header h1 {
+    font-size: 38px;
+}
+
+.main-header p {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+/* Sections */
+.centered {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.centered h2 {
+    margin-bottom: 14px;
+    border-bottom: 1px solid #1e293b;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.edu-subtitle {
+    margin: 20px 0 30px;
+    font-size: 16px;
+    color: #93c5fd;
+}
+
+/* Cards – 3 columns */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 עמודות */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #0a2540, #0f3a5f);
+    padding: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #e0f2fe;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+    color: #bae6fd;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-right: 0;
+    }
+
+    .contact-info {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
